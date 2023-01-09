@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        body{
+            background-color: tan;
+        }
+        span{
+            font-size: 30px;
+        }
+        h1{
+            text-align: center;
+            font-size: 45px;
+        }
+        p{
+            text-align: center;
+            font-size: 25px;
+        }
+        img{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }   
+        .container1{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .box{
+            border-style: solid;
+            border-color: green;
+        }
+        button{
+            width:200px;
+            height:100px;
+        }
+        table{
+            border:thick solid green;
+            border-collapse: collapse;
+            width:25%;
+        }
+        td, td{
+            border:thin solid green;
+            padding: 8px;
+            width:50%;
+        }
+        #diceTable{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #doubles{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 30px;
+        }
+        #triples{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 30px;
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body onload="initialize();">
+    <h1>Dice Roller!</h1>
+    <img src="rolling dice.jpg" alt="A hand tosses 5 dice onto a table.">
+    <h2>How many dice do you want to roll?</h2>
+    <div class="container">
+        <button onclick="oneDice();">1</button>
+        <button onclick="twoDice();">2</button>
+        <button onclick="threeDice();">3</button>
+    </div>
+    <div class="container">
+        <button onclick="rollDice();">Roll!</button>
+    </div>
+    <p></p>
+    <div class="box">
+        <div class="container1">
+        <span id="roll">Roll:</span>
+        <span id="result">Result:</span>
+        </div>
+        </table>
+    </div>
+    <p></p>
+    <div class="container1">
+    <span id="mean">Mean:</span>
+    <span id="median">Median:</span>
+    <span id="mode">Mode:</span>
+    </div>
+    <p></p>
+    <table id="diceTable">
+        <tr>
+            <th>Numbers</th>
+            <th>Frequency</th>
+        </tr>
+    </table>
+    <div id="doubles"></div>
+    <div id="triples"></div>
+</body>
+</html>
+
+<!--I provided an alt on my image so the visually impaired will still understand the image. Additionally, I made sure the colors mesh well and aren't overly distracting or 
+cause any disturbance in viewing. Lastly, I added a h2 after my h1, and organized my structure so that it's easy to view. Additionally, I increased the font size -->
