@@ -119,26 +119,26 @@ function mValues(rVal){
     var mode = a => {
         a = a.slice().sort((x, y) => x - y);
       
-        var bestStreak = 1;
-        var bestElem = a[0];
-        var currentStreak = 1;
-        var currentElem = a[0];
+        var best = 1;
+        var best1 = a[0];
+        var current = 1;
+        var current1 = a[0];
       
         for (let i = 1; i < a.length; i++) {
           if (a[i-1] !== a[i]) {
-            if (currentStreak > bestStreak) {
-              bestStreak = currentStreak;
-              bestElem = currentElem;
+            if (current > best) {
+              best = current;
+              best1 = current1;
             }
       
-            currentStreak = 0;
-            currentElem = a[i];
+            current = 0;
+            current1 = a[i];
           }
       
-          currentStreak++;
+          current++;
         }
       
-        return currentStreak > bestStreak ? currentElem : bestElem;
+        return current > best ? current1 : best1;
       };
       
       modeVal.innerHTML = "Mode: " + mode(values);
